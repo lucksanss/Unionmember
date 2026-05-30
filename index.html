@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Union Management Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<h1>Union Management Portal</h1>
+<p>Manage member role assignments and verification</p>
+</header>
+
+<div class="glass-card">
+
+<form id="applicationForm">
+
+<input
+type="text"
+id="ic_name"
+placeholder="Enter IC Name"
+required>
+
+<input
+type="text"
+id="discord_id"
+placeholder="username#0000 or Discord User ID"
+required>
+
+<div class="question">
+<label>Kaula Lumpur role in Ascend Discord?</label>
+
+<select id="kl_ascend">
+<option value="true">Yes</option>
+<option value="false">No</option>
+</select>
+</div>
+
+<div class="question">
+<label>Antera role in Ascend Discord?</label>
+
+<select id="antera_ascend">
+<option value="true">Yes</option>
+<option value="false">No</option>
+</select>
+</div>
+
+<div class="question">
+<label>IC role in Kaula Lumpur?</label>
+
+<select id="kl_ic">
+<option value="true">Yes</option>
+<option value="false">No</option>
+</select>
+</div>
+
+<div class="question">
+<label>IC role in Antera?</label>
+
+<select id="antera_ic">
+<option value="true">Yes</option>
+<option value="false">No</option>
+</select>
+</div>
+
+<input
+type="tel"
+id="whatsapp"
+placeholder="+60xxxxxxxxx">
+
+<button type="submit">
+Submit Application
+</button>
+
+</form>
+
+<div id="success"></div>
+
+</div>
+
+</div>
+
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

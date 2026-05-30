@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+</head>
+<body>
+
+<div class="admin">
+
+<div class="sidebar">
+
+<h2>Union Admin</h2>
+
+<a href="#">Dashboard</a>
+<a href="#">Applications</a>
+<a href="#">Approved</a>
+<a href="#">Rejected</a>
+<a href="#">Settings</a>
+
+</div>
+
+<div class="content">
+
+<div class="cards">
+
+<div class="stat">
+<h3 id="total">0</h3>
+<p>Total Applications</p>
+</div>
+
+<div class="stat">
+<h3 id="pending">0</h3>
+<p>Pending Reviews</p>
+</div>
+
+<div class="stat">
+<h3 id="approved">0</h3>
+<p>Approved</p>
+</div>
+
+<div class="stat">
+<h3 id="rejected">0</h3>
+<p>Rejected</p>
+</div>
+
+</div>
+
+<input
+id="search"
+placeholder="Search IC Name or Discord ID">
+
+<table>
+
+<thead>
+<tr>
+<thead>
+<tr>
+    <th>IC Name</th>
+    <th>Discord ID</th>
+    <th>KL Role</th>
+    <th>Antera Role</th>
+    <th>KL IC Role</th>
+    <th>Antera IC Role</th>
+    <th>WhatsApp</th>
+    <th>Status</th>
+    <th>Actions</th>
+</tr>
+</thead>
+</tr>
+</thead>
+
+<tbody id="applications">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="supabase.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>

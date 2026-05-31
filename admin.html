@@ -1,88 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Admin Dashboard</title>
+<title>Kuala Lampur Union Admin</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="admin.css">
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 </head>
+
 <body>
 
-<div class="admin">
+<div class="dashboard">
+
+<!-- SIDEBAR -->
 
 <div class="sidebar">
 
-<h2>KL Leader</h2>
+<h2>KL UNION</h2>
 
-<a href="#">Dashboard</a>
-<a href="#">Applications</a>
-<a href="#">Approved</a>
-<a href="#">Rejected</a>
-<a href="#">Settings</a>
+<a href="#">
+🏠 Dashboard
+</a>
+
+<a href="#">
+📋 Applications
+</a>
+
+<a href="#">
+✅ Approved Members
+</a>
+
+<a href="#">
+❌ Rejected Members
+</a>
+
+<a href="#">
+⚙ Settings
+</a>
+
+<button onclick="logout()">
+🚪 Logout
+</button>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<h1>
+🔥 Ascend RP Union Dashboard
+</h1>
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="card">
+
+<h2 id="totalApplications">
+0
+</h2>
+
+<p>
+Total Applications
+</p>
 
 </div>
 
-<div class="content">
+<div class="card">
 
-<div class="cards">
+<h2 id="pendingApplications">
+0
+</h2>
 
-<div class="stat">
-<h3 id="total">0</h3>
-<p>Total Applications</p>
-</div>
-
-<div class="stat">
-<h3 id="pending">0</h3>
-<p>Pending Reviews</p>
-</div>
-
-<div class="stat">
-<h3 id="approved">0</h3>
-<p>Approved</p>
-</div>
-
-<div class="stat">
-<h3 id="rejected">0</h3>
-<p>Rejected</p>
-</div>
+<p>
+Pending Reviews
+</p>
 
 </div>
+
+<div class="card">
+
+<h2 id="approvedApplications">
+0
+</h2>
+
+<p>
+Approved Members
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="rejectedApplications">
+0
+</h2>
+
+<p>
+Rejected Members
+</p>
+
+</div>
+
+</div>
+
+<!-- CONTROLS -->
+
+<div class="controls">
 
 <input
+type="text"
 id="search"
-placeholder="Search IC Name or Discord ID">
+placeholder="🔍 Search IC Name or Discord ID">
+
+<button onclick="exportCSV()">
+📥 Export CSV
+</button>
+
+</div>
+
+<!-- TABLE -->
+
+<div class="table-container">
 
 <table>
 
 <thead>
+
 <tr>
-<thead>
-<tr>
-    <th>IC Name</th>
-    <th>Discord ID</th>
-    <th>KL Role</th>
-    <th>Antera Role</th>
-    <th>KL IC Role</th>
-    <th>Antera IC Role</th>
-    <th>WhatsApp</th>
-    <th>Status</th>
-    <th>Actions</th>
+
+<th>IC Name</th>
+
+<th>Discord ID</th>
+
+<th>KL Role</th>
+
+<th>Antera Role</th>
+
+<th>KL IC</th>
+
+<th>Antera IC</th>
+
+<th>WhatsApp</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
 </tr>
-</thead>
-</tr>
+
 </thead>
 
-<tbody id="applications">
+<tbody id="applicationsTable">
+
+<tr>
+
+<td colspan="9" style="text-align:center;padding:40px;">
+Loading Applications...
+</td>
+
+</tr>
 
 </tbody>
 
 </table>
+
+</div>
+
+<!-- AUDIT LOG -->
+
+<div style="
+margin-top:30px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+">
+
+<h2 style="
+margin-bottom:20px;
+color:#ffd700;
+">
+📜 Audit Log
+</h2>
+
+<div id="auditLog">
+
+<p>
+No actions recorded yet.
+</p>
+
+</div>
+
+</div>
 
 </div>
 

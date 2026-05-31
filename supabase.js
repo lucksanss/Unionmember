@@ -8,4 +8,4 @@ const supabaseClient =
 supabase.createClient(
 SUPABASE_URL,
 SUPABASE_KEY
-);
+);// Add your Supabase URL and anon key

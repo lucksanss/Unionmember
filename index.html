@@ -1,27 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KL Union Management</title>
+<title>Kuala Lampur Union | Ascend RP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 </head>
+
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
 
-<header>
-<h1>KL Union Management Portal</h1>
-<p>Fill The below</p>
-</header>
+<nav class="navbar">
 
-<div class="glass-card">
+<div class="logo">
+KUALA LAMPUR UNION
+</div>
+
+<div class="nav-menu">
+<a href="#home">Home</a>
+<a href="#application">Apply</a>
+<a href="login.html">Admin</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<div class="hero-badge">
+🔥 ASCEND ROLEPLAY OFFICIAL UNION
+</div>
+
+<h1>
+KUALA LAMPUR
+</h1>
+
+<p>
+Welcome to the official Kuala Lampur Union Management Portal.
+Manage member verification, role assignments, and union operations within Ascend RP.
+</p>
+
+<a href="#application" class="hero-btn">
+🚀 Submit Application
+</a>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>Ascend</h2>
+<p>Verified Core Comunity</p>
+</div>
+
+<div class="stat-card">
+<h2>24/7</h2>
+<p>Union Support</p>
+</div>
+
+<div class="stat-card">
+<h2>ASCEND</h2>
+<p>Official Roleplay Community</p>
+</div>
+
+</section>
+
+<!-- APPLICATION -->
+
+<section id="application" class="application">
+
+<div class="form-card">
+
+<div class="union-banner">
+
+<span>ASCEND ROLEPLAY</span>
+
+<h2>KUALA LAMPUR UNION</h2>
+
+<p>
+Ride Together • Build Together • Roleplay Together
+</p>
+
+</div>
+
+<section class="leaders-section">
+
+<h2>👑 Kuala Lampur Leadership</h2>
+
+<div class="leaders-grid">
+
+
+<div class="leader-card">
+<img src="images/leader1.png" class="leader-avatar-img">
+<h3>MR loky</h3>
+<p>Founder</p>
+<span>Discord: theloky</span>
+</div>
+
+<div class="leader-card">
+<img src="images/leader2.png" class="leader-avatar-img">
+<h3>Scott Mikaelson</h3>
+<p>Founder/Union President</p>
+</p>
+<span>Discord: scott.vin</span>
+</div>
+
+<div class="leader-card">
+<img src="images/leader3.png" class="leader-avatar-img">
+<h3>Kutty Bhaiya</h3>
+<p>Union President</p>
+<span>Discord: gamer_47_tamil</span>
+</div>
+
+<div class="leader-card">
+<img src="images/leader4.png" class="leader-avatar-img">
+<h3>Mille Brown</h3>
+<p>Management</p>
+<span>Discord: meow_gaming_12</span>
+</div>
+
+<div class="leader-card">
+<img src="images/leader5.png" class="leader-avatar-img">
+<h3>Steve Roges</h3>
+<p>Management</p>
+<span>Discord: aargaming07</span>
+</div>
+
+
+</div>
+
+</section>
 
 <form id="applicationForm">
+
+<div class="input-group">
+
+<label>
+IC Name
+</label>
 
 <input
 type="text"
@@ -29,64 +162,142 @@ id="ic_name"
 placeholder="Enter IC Name"
 required>
 
+</div>
+
+<div class="input-group">
+
+<label>
+Discord ID
+</label>
+
 <input
 type="text"
 id="discord_id"
 placeholder="username#0000 or Discord User ID"
 required>
 
-<div class="question">
-<label>Kuala Lumpur role in Ascend Discord?</label>
+</div>
+
+<div class="input-group">
+
+<label>
+Did you receive the Kaula Lumpur role in Ascend Discord?
+</label>
 
 <select id="kl_ascend">
-<option value="true">Yes</option>
-<option value="false">No</option>
+
+<option value="true">
+Yes
+</option>
+
+<option value="false">
+No
+</option>
+
 </select>
+
 </div>
 
-<div class="question">
-<label>Antera role in Ascend Discord?</label>
+<div class="input-group">
+
+<label>
+Did you receive the Antera role in Ascend Discord?
+</label>
 
 <select id="antera_ascend">
-<option value="true">Yes</option>
-<option value="false">No</option>
+
+<option value="true">
+Yes
+</option>
+
+<option value="false">
+No
+</option>
+
 </select>
+
 </div>
 
-<div class="question">
-<label>IC role in Kuala Lumpur?</label>
+<div class="input-group">
+
+<label>
+Did you receive the IC role in Kaula Lumpur?
+</label>
 
 <select id="kl_ic">
-<option value="true">Yes</option>
-<option value="false">No</option>
+
+<option value="true">
+Yes
+</option>
+
+<option value="false">
+No
+</option>
+
 </select>
+
 </div>
 
-<div class="question">
-<label>IC role in Antera?</label>
+<div class="input-group">
+
+<label>
+Did you receive the IC role in Antera?
+</label>
 
 <select id="antera_ic">
-<option value="true">Yes</option>
-<option value="false">No</option>
+
+<option value="true">
+Yes
+</option>
+
+<option value="false">
+No
+</option>
+
 </select>
+
 </div>
+
+<div class="input-group">
+
+<label>
+WhatsApp Number
+</label>
 
 <input
 type="tel"
 id="whatsapp"
 placeholder="+60xxxxxxxxx">
 
+</div>
+
 <button type="submit">
-Submit Application
+⚡ Submit Application
 </button>
+
+<div id="successMessage"></div>
 
 </form>
 
-<div id="success"></div>
-
 </div>
 
-</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+Kuala Lampur Union
+</h3>
+
+<p>
+Powered by Ascend Roleplay
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 <script src="supabase.js"></script>
 <script src="app.js"></script>

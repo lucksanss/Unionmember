@@ -1,14 +1,13 @@
 const form =
 document.getElementById("applicationForm");
 
-form.addEventListener("submit", async (e)=>{
+form.addEventListener(
+"submit",
+async (e)=>{
 
 e.preventDefault();
 
-const { error } =
-await supabaseClient
-.from("union_applications")
-.insert([{
+const application = {
 
 ic_name:
 document.getElementById("ic_name").value,
@@ -33,16 +32,25 @@ document.getElementById("whatsapp").value,
 
 status:"Pending"
 
-}]);
+};
+
+const { error } =
+await supabaseClient
+.from("union_applications")
+.insert([application]);
 
 if(error){
+
 alert(error.message);
 return;
+
 }
 
-document.getElementById("success").innerHTML =
-"Application submitted successfully. Await admin review.";
+document.getElementById(
+"successMessage"
+).innerHTML =
+"✓ Application submitted successfully. Await admin review.";
 
 form.reset();
 
-});
+});// Supabase form logic here

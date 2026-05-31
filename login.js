@@ -1,8 +1,8 @@
 const ADMIN_USERNAME =
-"unionadmin";
+"KLadmin";
 
 const ADMIN_PASSWORD =
-"AscendKL2026";
+"KLascend";
 
 function login(){
 
